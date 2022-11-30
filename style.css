@@ -9,3 +9,8 @@ body
     height: 100vh;
     background: #193050;
 }
+.Chansey-Supply-Store
+{
+    object-fit: none;
+    object-position: -66px -0px;
+}

@@ -1,0 +1,7 @@
+CHANSEY SUPPLY SHOP
+{lat: -146.25, lng: 275.75}
+{lat: -260, lng: 157}
+{lat: -280.25, lng: 428.75}
+{lat: -393.75, lng: 247}
+{lat: -389.5, lng: 256.75}
+
