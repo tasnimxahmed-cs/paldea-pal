@@ -5,3 +5,6 @@ CHANSEY SUPPLY SHOP
 {lat: -393.75, lng: 247}
 {lat: -389.5, lng: 256.75}
 
+CLOTHING STORE
+[-387.5, 241.5]
+[-388.25, 248.25]

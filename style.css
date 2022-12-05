@@ -2,6 +2,7 @@ body
 {
     margin: 0;
     padding: 0;
+    font-family: 'Roboto', sans-serif;
 }
 #map
 {
@@ -13,4 +14,65 @@ body
 {
     object-fit: none;
     object-position: -66px -0px;
+    /*display: none;*/
+}
+.Clothing-Store
+{
+    object-fit: none;
+    object-position: -99px -0px;
+    /*display: none;*/
+}
+.Delibird-Presents
+{
+    object-fit: none;
+    object-position: -132px -0px;
+    /*display: none;*/
+}
+.Fast-Travel
+{
+    object-fit: none;
+    object-position: -198px -0px;
+    /*display: none;*/
+}
+.Food-Store
+{
+    object-fit: none;
+    object-position: 0px -44px;
+    /*display: none;*/
+}
+.Hairdresser
+{
+    object-fit: none;
+    object-position: -165px -44px;
+    /*display: none;*/
+}
+.Location
+{
+    object-fit: none;
+    object-position: -66px -88px;
+    /*display: none;*/
+}
+.Pokécenter
+{
+    object-fit: none;
+    object-position: -165px -132px;
+    /*display: none;*/
+}
+.Shrine
+{
+    object-fit: none;
+    object-position: -33px -176px;
+    /*display: none;*/
+}
+.Watchtower
+{
+    object-fit: none;
+    object-position: -99px -220px;
+    /*display: none;*/
+}
+.leaflet-popup-content-wrapper {
+    background-color: #193050;
+}
+.leaflet-popup-content {
+    color: white;
 }

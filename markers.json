@@ -1,8 +1,52 @@
 [
     {
         "type": "Chansey Supply Store",
-        "name": "Chansey Supply Store",
         "css": "Chansey-Supply-Store",
         "markers": [[-146.25, 275.75], [-260,157], [-280.25,428.75], [-393.75,247], [-389.5,256.75]]
+    },
+    {
+        "type": "Clothing Store",
+        "css": "Clothing-Store",
+        "markers": [[-387.5, 241.5, "Bagin's"], [-388.25, 248.25, "Fashion Street"], [-393.75, 248.25, "Rough and Tough"], [-261.5, 158, "Zapaldea Footwear"], [-270.5, 159.75, "Sock and Quarter"], [-270.75, 162.5, "Rough and Tough"], [-279.75, 416.5, "Seguro Style"], [-281.5, 416.25, "Bagin's"], [-283.5, 416, "Spec Shack"], [-284, 427, "Rough and Tough"], [-306, 412.25, "Fashion Street"], [-303.25, 424.75, "Veracidad"]]
+    },
+    {
+        "type": "Delibird Presents",
+        "css": "Delibird-Presents",
+        "markers": [[-281.5, 424.25, "Delibird Presents"], [-399.25, 249.625,"Delibird Presents"], [-397, 227.875, "Delibird Presents"], [-389, 225.625, "Delibird Presents"], [-265.75, 142.5,"Delibird Presents"], [-265.75, 160, "Delibird Presents"]]
+    },
+    {
+        "type": "Fast Travel",
+        "css": "Fast-Travel",
+        "markers": [[-448.25, 367.25, "Secluded Beach"], [-469.25, 263.75, "Poco Path Lighthouse"], [-487.25, 235.25, "Your House"], [-427.25, 99.5, "The Leaking Tower of Paldea"], [-393.5, 280.25, "Mesagoza (East Gate)"], [-373.25, 245, "Academy"], [-393.5, 211.25, "Mesagoza (West Gate"], [-376.25, 181.25, "Grand Olive Orchard"], [-277, 445.5, "Levincia Lighthouse"], [-284.25, 398.25, "Million Volt Skyline"], [-276.25, 379.25, "East Province (Area Three) Rest Stop"], [-258, 219.75, "Zero Gate"], [-235.5, 97, "Collonade Hollow"], [-240.75, 44, "Porto Marinada Lighthouse"], [-190, 413.75, "Fury Falls"], [-168, 301.5, "Paldea's Highest Peak"], [-152.75, 219.5, "Glaseado's Grasp"], [-134.75, 188.25, "Casseroya Falls"], [-150.5, 135.75, "Casseroya Lake"], [-63, 229.5, "North Province (Area Three) Lighthouse"], [-106.5, 75.75, "Gracia Stones"]]
+    },
+    {
+        "type": "Food Store",
+        "css": "Food-Store",
+        "markers": [[-372.25, 249, "Cafetaria"], [-377.5, 233.25, "Every Wich Way"], [-381.5, 236.75, "Barato's"], [-379.5, 252, "Vending Machine"], [-383, 248, "Seabreeze Cafe"], [-381.5, 260.25, "Go-For-Broke Grill"], [-382.75, 260, "Barato's"], [-384, 262.5, "Every Wich Way"], [-385.5, 257.5, "Vending Machine"], [-387.25, 262.5, "Dessert Stands"], [-389.5, 231, "Sure Cans"], [-390.5, 231.25, "Deli Cioso"], [-389, 240.5, "Picnic-Knacks"], [-393, 227.75, "Artisan Bakery"], [-392.5, 230.25, "Go-For-Broke Grill"], [-392, 232.25, "Artisan Bakery"], [-393.75, 233, "Go-For-Broke Grill"], [-389.5, 249.25, "Seabreeze Cafe"], [-395.25, 249.25, "Go-For-Broke Grill"], [-395.5, 250.25, "Deli Cioso"], [-395.75, 255.5, "Every Wich Way"], [-392.75, 257.25, "Sure Cans"], [-393, 264, "Dessert Stands"], [-393.5, 268.25, "SMOOCHURRO"], [-396, 227.5, "Deli Cioso"], [-396.75, 231.5, "Go-For-Broke Grill"], [-396.75, 233.25, "Barato's"], [-397.5, 233.75, "Seafood Fresco"], [-398.5, 234.5, "Seabreeze Cafe"], [-400.25, 235.5, "Every Wich Food"], [-403.25, 238.75, "Seabreeze Cafe"], [-281.25, 423, "Every Wich Way"], [-303, 425.5, "Vending Machine"], [-307, 425.75, "Dessert Stands"], [-307.75, 425, "Go-For-Broke Grill"], [-310, 425.25, "Every Wich Way"], [-310.25, 410.75, "Dessert Stands"], [-396, 150.25, "Deli Cioso"], [-394.75, 149.5, "SUGAR-N-ICE"], [-450, 249.5, "SUGAR-N-ICE"]]
+    },
+    {
+        "type": "Hairdresser",
+        "css": "Hairdresser",
+        "markers": [[-387.5, 242.75, "Salon Renancer"], [-277.5, 416.75, "Hair Styling"]]
+    },
+    {
+        "type": "Location",
+        "css": "Location",
+        "markers": [[-147.25, 279.25, "Montenevera"], [-249.75, 48.5, "Porto Marinada"], [-234.25, 204.5, "Medali"], [-269.75, 152, "Cascarrafa"], [-276.25, 320, "Zapapico"], [-294.25, 420, "Levincia"], [-393, 146.25, "Cortondo"], [-391, 244.75, "Mesagoza"], [-384, 381.75, "Artazon"], [-454.5, 88.25, "Alfornada"], [-446, 245.75, "Los Platos"], [-487.5, 244.5, "Cabo Poco"], [-480.25, 245.5, "Poco Path"], [-477.5, 258.5, "Inlet Grotto"]]
+    },
+    {
+        "type": "Pokécenter",
+        "css": "Pokécenter",
+        "markers": [[-107.25, 231, "North Province (Area Three)"], [-142.25, 228.25, "Glaseado Mountain"], [-143.5, 278.75, "Montenevera"], [-176.25, 296, "Glaseado Gym"], [-170.25, 367, "North Province (Area One)"], [-174.75, 417.5, "North Province (Area Two)"], [-241.25, 64, "Porto Marinada"], [-260.75, 145.5, "Cascarrafa (North)"], [-278.25, 143.5, "Cascarrafa (West)"], [-238.75, 195, "Medali (West)"], [-232.75, 211.5, "Medali (East)"], [-237.25, 268.5, "Dalizapa Passage"], [-242.25, 351, "East Province (Area Three)"], [-271.75, 311, "Zapapico (West)"], [-273.25, 329, "Zapapico (East)"], [-277.75, 420.5, "Levincia (North)"], [-312.75, 414, "Levincia (South)"], [-311.5, 105.5, "West Province (Area One) - North"], [-359.5, 82, "West Province (Area One) - Central"], [-348, 204.5, "Pokemon League"], [-332.5, 368.5, "East Province (Area Two)"], [-357, 404, "East Province (Area One)"], [-451.5, 78.5, "Alfornada"], [-392, 137, "Cortondo (West)"], [-393.5, 155.5, "Cortondo (East)"], [-403.5, 188.5, "South Province (Area Two)"], [-388, 238, "Mesagoza (West)"], [-392, 268, "Mesagoza (East)"], [-386, 306.5, "South Province (Area Three)"],  [-383.5, 370.5, "Artazon (West)"], [-380, 394, "Artazon (East)"], [-422, 247.5, "Mesagoza (South)"], [-449, 252, "Los Platos (East)"], [-457.5, 351, "South Province (Area Five)"]]
+    },
+    {
+        "type": "Shrine",
+        "css": "Shrine",
+        "markers": [[-101.25, 117, "Groundblight Shrine"], [-194.75, 416.75, "Firescourge Shrine"], [-471.25, 317.75, "Grasswither Shrine"], [-330.25, 38.75, "Icerend Shrine"]]
+    },
+    {
+        "type": "Watchtower",
+        "css": "Watchtower",
+        "markers": [[-145.5, 201.5, "Casseroya Watchtower No. 3"], [-146.5, 417, "North Province (Area One) Watchtower"], [-168, 348, "Glaseado Mountain Watchtower"], [-176, 182.5, "Casseroya Watchtower No. 2"], [-210.5, 137.5, "Casseroya Watchtower No. 1"], [-259.5, 388, "East Province (Area Three) Watchtower"], [-267.75, 104.25, "Watchtower"], [-312.75, 126.25, "West Province (Area One) Watchtower"], [-337, 441.75, "East Province (Area One) Watchtower"], [-394.5, 183, "South Province (Area Two) Watchtower"], [-427.5, 99.5, "Leaking Tower of Paldea"], [-444.5, 177.5, "South Province (Area Four) Watchtower"], [-369.5, 335, "South Province (Area Three) Watchtower"], [-415, 338, "South Province (Area Five) Watchtower"]]
     }
 ]
