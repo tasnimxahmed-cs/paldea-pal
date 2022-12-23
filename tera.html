@@ -1,0 +1,81 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paldea Pal | Interactive Map</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,800" rel="stylesheet" />
+    <link href="./css/tera.css" rel="stylesheet" />
+
+    <link href="https://fonts.cdnfonts.com/css/pokemon-solid" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style> @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap'); </style>
+  </head>
+  <body>
+    <div class="s006">
+      <img src="./images/background.jpg" class="bg">
+      <form autocomplete="off" onsubmit="return false;">
+        <fieldset>
+          <legend style="font-family: 'Pokemon Solid', sans-serif; letter-spacing: .5rem; text-shadow: 2px 2px 4px #000000;">TERA RAID CALCULATOR</legend>
+          
+          <div class="inner-form">
+            <div class="input-field">
+              <button id="searchButton" onclick="getPokemon()" class="btn-search" type="button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                  <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
+                </svg>
+              </button>
+              <input id="searchInput" autofocus id="search" type="text" placeholder="Search by Pokémon Name..." />
+            </div>
+          </div>
+
+          <div id="pokeModal" class="modal">
+
+            <div class="modal-content">
+              <span class="close">&times;</span>
+
+              <section class="modal-container">
+
+                <div class="modal-left">
+                  <img id="pokeImg" src="" alt="">
+                  <h3 id="pokeNameNumber"></h3>
+                  <span class="pokeType"></span>
+                  <span class="pokeType"></span>
+                  <h4>Tera Type:
+                    <select id="teras">
+                      <option style="background-color: #a8a878;" value="normal">Normal</option>
+                      <option style="background-color: #f08030;" value="fire">Fire</option>
+                      <option style="background-color: #c03028;" value="fighting">Fighting</option>
+                      <option style="background-color: #6890f0;" value="water">Water</option>
+                      <option style="background-color: #a890f0;" value="flying">Flying</option>
+                      <option style="background-color: #78c850;" value="grass">Grass</option>
+                      <option style="background-color: #a040a0;" value="poison">Poison</option>
+                      <option style="background-color: #f8d030;" value="electric">Electric</option>
+                      <option style="background-color: #e0c068;" value="ground">Ground</option>
+                      <option style="background-color: #f85888;" value="psychic">Psychic</option>
+                      <option style="background-color: #b8a038;" value="rock">Rock</option>
+                      <option style="background-color: #98d8d8;" value="ice">Ice</option>
+                      <option style="background-color: #a8b820;" value="bug">Bug</option>
+                      <option style="background-color: #7038f8;" value="dragon">Dragon</option>
+                      <option style="background-color: #705898;" value="ghost">Ghost</option>
+                      <option style="background-color: #705848;" value="dark">Dark</option>
+                      <option style="background-color: #b8b8d0;" value="steel">Steel</option>
+                      <option style="background-color: #ee99ac;" value="fairy">Fairy</option>
+                    </select>
+                  </h4>
+
+                </div>
+
+                <div class="modal-right">
+                  
+                </div>
+              </section>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+    <script src="./js/tera.js"></script>
+  </body>
+</html>
