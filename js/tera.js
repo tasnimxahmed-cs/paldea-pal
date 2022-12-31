@@ -1,4 +1,4 @@
-fetch('../paldea.json')
+fetch('https://raw.githubusercontent.com/tasnimxahmed-cs/paldea-pal/master/paldea.json')
     .then((response) => response.json())
     .then((json) => {
         localStorage.setItem("pokedex", JSON.stringify(json));
