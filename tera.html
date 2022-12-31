@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paldea Pal | Interactive Map</title>
+    <title>Paldea Pal | Tera Raid Calculator</title>
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,800" rel="stylesheet" />
     <link href="./css/tera.css" rel="stylesheet" />
@@ -40,10 +40,9 @@
                 <div class="modal-left">
                   <img id="pokeImg" src="" alt="">
                   <h3 id="pokeNameNumber"></h3>
-                  <span class="pokeType"></span>
-                  <span class="pokeType"></span>
+                  <div id="baseTypes"></div>
                   <h4>Tera Type:
-                    <select id="teras">
+                    <select onchange="newTera()" id="teras">
                       <option style="background-color: #a8a878;" value="normal">Normal</option>
                       <option style="background-color: #f08030;" value="fire">Fire</option>
                       <option style="background-color: #c03028;" value="fighting">Fighting</option>
@@ -68,7 +67,12 @@
                 </div>
 
                 <div class="modal-right">
-                  
+                  <h3>Strong Against:</h3>
+                  <div id="strengths"></div>
+                  <h3>Weak Against:</h3>
+                  <div id="weaknesses"></div>
+                  <br>
+                  <small id="teraNote"><i>*Due to Tera-Type</i></small>
                 </div>
               </section>
             </div>

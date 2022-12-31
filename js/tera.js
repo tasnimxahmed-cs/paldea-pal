@@ -27,6 +27,9 @@ document.addEventListener("keydown", ({key}) => {
             modal.style.display = "none";
             search.value = "";
             search.focus();
+            document.getElementById('strengths').innerHTML = '';
+            document.getElementById('weaknesses').innerHTML = '';
+            document.getElementById('baseTypes').innerHTML = '';
         }
     }
 });
@@ -35,6 +38,9 @@ span.onclick = function() {
   modal.style.display = "none";
   search.value = "";
   search.focus();
+  document.getElementById('strengths').innerHTML = '';
+  document.getElementById('weaknesses').innerHTML = '';
+  document.getElementById('baseTypes').innerHTML = '';
 }
 
 window.onclick = function(event) {
@@ -42,8 +48,20 @@ window.onclick = function(event) {
     modal.style.display = "none";
     search.value = "";
     search.focus();
+    document.getElementById('strengths').innerHTML = '';
+    document.getElementById('weaknesses').innerHTML = '';
+    document.getElementById('baseTypes').innerHTML = '';
   }
 }
+
+function newTera()
+{
+    document.getElementById('teras').style.backgroundColor = typeColors[document.getElementById('teras').value.toLowerCase()];
+    var pokeName = document.getElementById('pokeNameNumber').innerHTML;
+    pokeName = pokeName.split(" ")[0];
+    getPokemon(pokeName);
+}
+
 
 const typeColors = {
     normal: "#a8a878",
@@ -161,15 +179,19 @@ function autocomplete(inp, arr)
     });
 }
 
-const getPokemon = function (pokemon) {
+const getPokemon = async function (pokemon) {
     pokedex = JSON.parse(localStorage.getItem('pokedex'));
-    pokedex.forEach(element => {
+    pokedex.forEach(async element => {
         if(element.name.toLowerCase() == pokemon.toLowerCase())
         {
             modal.style.display = "block";
-            document.getElementById('teras').style.backgroundColor = typeColors[document.getElementById('teras').value.toLowerCase()]
+            document.getElementById('strengths').innerHTML = '';
+            document.getElementById('weaknesses').innerHTML = '';
+            document.getElementById('baseTypes').innerHTML = '';
+            document.getElementById('teras').style.backgroundColor = typeColors[document.getElementById('teras').value.toLowerCase()];
             document.getElementById('pokeImg').src = element.img;
             document.getElementById('pokeNameNumber').innerHTML = element.name + ' · ' + element.number;
+            
 
             var fTypes = element.types.replace("[", '');
             fTypes = fTypes.replace("]", '');
@@ -177,26 +199,97 @@ const getPokemon = function (pokemon) {
             fTypes = fTypes.replace(",", '');
 
             var aTypes = fTypes.split(" ");
-            
-            pokeTypeSpans = document.getElementsByClassName('pokeType');
 
-            if(aTypes.length < pokeTypeSpans.length)
+            for(var i=0; i<aTypes.length; i++)
             {
-                pokeTypeSpans[0].innerHTML = aTypes[0];
-                pokeTypeSpans[0].style.backgroundColor = typeColors[aTypes[0].toLowerCase()];
-                pokeTypeSpans[1].innerHTML = '';
-                pokeTypeSpans[1].style.display = 'none';
+                const span = document.createElement('span');
+                const node = document.createTextNode(aTypes[i]);
+                span.classList.add('pokeType');
+                span.style.backgroundColor = typeColors[aTypes[i].toLowerCase()];
+                span.appendChild(node);
+                document.getElementById('baseTypes').appendChild(span);
             }
-            else
+
+            aTypes.push(document.getElementById('teras').value);
+            
+            async function calculateTypes(aTypes)
             {
-                console.log('2')
+                var strengths = [];
+                var weaknesses = [];
+                var teraStrengths = [];
+                var teraWeaknesses = [];
+
                 for(var i=0; i<aTypes.length; i++)
                 {
-                    pokeTypeSpans[i].innerHTML = aTypes[i];
-                    pokeTypeSpans[i].style.backgroundColor = typeColors[aTypes[i].toLowerCase()];
-                    pokeTypeSpans[1].style.display = 'inline-block';
+                    var response = await fetch('https://pokeapi.co/api/v2/type/'+aTypes[i].toLowerCase());
+                    var json = await response.json();
+                    for(var j=0; j<json.damage_relations.double_damage_to.length; j++)
+                    {
+                        if(i==aTypes.length-1) teraStrengths.push(json.damage_relations.double_damage_to[j].name);
+                        strengths.push(json.damage_relations.double_damage_to[j].name);
+                    }
+                    for(var j=0; j<json.damage_relations.double_damage_from.length; j++)
+                    {
+                        if(i==aTypes.length-1) teraWeaknesses.push(json.damage_relations.double_damage_from[j].name);
+                        weaknesses.push(json.damage_relations.double_damage_from[j].name);
+                    }
                 }
+
+                sStrengths = [...new Set(strengths)];
+                sWeaknesses = [...new Set(weaknesses)];
+
+                sStrengths.forEach(strength => {
+                    const span = document.createElement('span');
+                    var fStrength = strength.charAt(0).toUpperCase() + strength.slice(1);
+                    const node = document.createTextNode(fStrength);
+                    span.classList.add('pokeType');
+                    span.style.backgroundColor = typeColors[fStrength.toLowerCase()];
+                    span.appendChild(node);
+                    document.getElementById('strengths').appendChild(span);
+                });
+
+                sWeaknesses.forEach(weakness => {
+                    const span = document.createElement('span');
+                    var fWeakness = weakness.charAt(0).toUpperCase() + weakness.slice(1);
+                    const node = document.createTextNode(fWeakness);
+                    span.classList.add('pokeType');
+                    span.style.backgroundColor = typeColors[fWeakness.toLowerCase()];
+                    span.appendChild(node);
+                    document.getElementById('weaknesses').appendChild(span);
+                });
+
+                allTypes = document.getElementsByClassName('pokeType');
+                var response = await fetch('https://pokeapi.co/api/v2/type/'+document.getElementById('teras').value.toLowerCase());
+                var json = await response.json();
+                for(var i=0;i<allTypes.length;i++)
+                {
+                    console.log(allTypes[i].parentNode.id)
+                    if(allTypes[i].parentNode.id == "strengths")
+                    {
+                        for(var j=0; j<json.damage_relations.double_damage_to.length; j++)
+                        {
+                            if(allTypes[i].innerHTML.toLowerCase() == json.damage_relations.double_damage_to[j].name.toLowerCase())
+                            {
+                                allTypes[i].style.border = "2px solid "+typeColors[document.getElementById('teras').value.toLowerCase()];
+                            }
+                        }
+                    }
+                    else if(allTypes[i].parentNode.id == 'weaknesses')
+                    {
+                        for(var j=0; j<json.damage_relations.double_damage_from.length; j++)
+                        {
+                            if(allTypes[i].innerHTML.toLowerCase() == json.damage_relations.double_damage_from[j].name.toLowerCase())
+                            {
+                                allTypes[i].style.border = "2px solid "+typeColors[document.getElementById('teras').value.toLowerCase()];
+                            }
+                        }
+                    }
+                }
+
+                document.getElementById('teraNote').style.color = typeColors[document.getElementById('teras').value.toLowerCase()];
             }
+
+            calculateTypes(aTypes);
         }
     });
 }
